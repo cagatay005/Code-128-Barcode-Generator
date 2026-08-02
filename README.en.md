@@ -1,6 +1,6 @@
 # Code128Generator
 
-🇹🇷 [Türkçe için tıklayın](README.md)
+[Türkçe için tıklayın](README.md)
 
 A simple command-line application written in C that encodes input text into a **Code 128 (Set B)** barcode and saves it as a `.bmp` file.
 
