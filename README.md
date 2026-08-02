@@ -1,6 +1,5 @@
 # Code128Generator
-
-🇬🇧 [Read in English](README.en.md)
+[Read in English](README.en.md)
 
 Girilen metni **Code 128 (Set B)** barkoduna çevirip `.bmp` dosyası olarak kaydeden, C ile yazılmış basit bir komut satırı uygulaması.
 
