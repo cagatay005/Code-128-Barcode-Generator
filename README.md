@@ -28,6 +28,22 @@ Manuel derlemek isterseniz:
 gcc -Wall -Iinclude src\main.c src\code128.c src\bmp.c -o Code128Gen.exe
 ```
 
+## Bellek Yönetimi (Valgrind Testi)
+
+Bellek sızıntısı olup olmadığını doğrulamak için `valgrind` ile test edilmiştir. Tüm ayrılan bellek doğru şekilde serbest bırakılmaktadır:
+
+![Valgrind Testi](images/valgrind-test.png)
+
+```
+==2567== HEAP SUMMARY:
+==2567==     in use at exit: 0 bytes in 0 blocks
+==2567==   total heap usage: 7 allocs, 7 frees, 3,833 bytes allocated
+==2567==
+==2567== All heap blocks were freed -- no leaks are possible
+==2567==
+==2567== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+```
+
 ## Kullanım
 
 Programı çalıştırıp barkoda çevrilecek metni girin:

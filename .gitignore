@@ -1,0 +1,17 @@
+# Derlenmis dosyalar
+*.exe
+*.o
+*.obj
+*.out
+Code128Gen
+src/barcode_gen
+
+# Windows / IDE
+*.pdb
+*.ilk
+.vs/
+.vscode/
+
+# OS
+Thumbs.db
+Desktop.ini
