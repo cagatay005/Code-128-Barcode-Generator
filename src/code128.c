@@ -50,13 +50,13 @@ Code128Data* generate_code128(const char *text) {
         return NULL;
     }
     
-    barcode->pattern[0] = '\0'; // strcat ile ekleme yapabilmek icin stringi baslatiyoruz
+    barcode->pattern[0] = '\0'; // strcat ile ekleme yapabilmek icin stringi baslatir
     barcode->length = total_bits;
 
-    // 1. ADIM: START B sembolunu ekle (Deger: 104)
+    // START B sembolunu ekle (Deger: 104)
     strcat(barcode->pattern, CODE128_PATTERNS[CODE128_START_B]);
     
-    // 2. ADIM: Metni isleme ve Checksum hesabi
+    // Metni isleme ve Checksum hesabi
     // Checksum baslangic degeri Start sembolunun degeriyle baslar
     int checksum = CODE128_START_B; 
     
@@ -77,11 +77,11 @@ Code128Data* generate_code128(const char *text) {
         checksum += value * (i + 1);
     }
     
-    // 3. ADIM: Checksum mod 103 hesabi yapilir ve barkoda eklenir
+    // Checksum mod 103 hesabi yapilir ve barkoda eklenir
     checksum = checksum % 103;
     strcat(barcode->pattern, CODE128_PATTERNS[checksum]);
     
-    // 4. ADIM: STOP sembolunu ekle (Deger: 106)
+    // STOP sembolunu ekle (Deger: 106)
     strcat(barcode->pattern, CODE128_PATTERNS[CODE128_STOP]);
     
     return barcode;
