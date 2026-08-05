@@ -17,7 +17,7 @@ int main () {
        return 1;
     }
 
-    // fgets enter karakterini de okur, onu temizleyecegim.
+    // fgets enter karakterini de okur, onu temizler
     input[strcspn(input, "\n")] = 0;
     
     if (strlen(input) == 0) {
